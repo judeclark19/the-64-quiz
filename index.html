@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The 64 Quiz</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="landing">
+        <h1>The 64 Quiz</h1>
+        <button id="start">Play!</button>
+      </div>
+      <div class="gameplay">
+        <div class="time">
+          <i class="fas fa-clock"></i> <span id="seconds-remaining"></span>
+        </div>
+        <div id="question-target"></div>
+      </div>
+
+      <div class="game-over">
+        <div class="game-over__header">
+          <h2>Game Over</h2>
+          <p>Final score:</p>
+          <h1 id="final-score">88</h1>
+        </div>
+
+        <hr />
+        <div id="recap">
+          <!-- populated in js -->
+        </div>
+      </div>
+    </main>
+
+    <template id="question-template">
+      <div class="question">
+        <h2 id="question-text"></h2>
+        <div class="options">
+          <!-- populated in js -->
+        </div>
+      </div>
+    </template>
+
+    <template id="recap-option-template">
+      <div class="recap-option">
+        <div style="display: flex; align-items: center; gap: 0.5rem">
+          <button class="option"></button>
+          <i class="fas"></i>
+        </div>
+        <span></span>
+      </div>
+    </template>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
