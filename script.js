@@ -72,7 +72,7 @@ class Quiz {
       }
     ];
     this.shuffledQuestions = this.questions.map((item) => {
-      item.userChoice = item.answer;
+      item.userChoice = null;
       return item;
     });
     this.secondsRemaining = 64;
@@ -177,9 +177,13 @@ class Quiz {
 
         optionEl.querySelector("button").textContent = option;
 
-        if (option === correctAnswer) {
+        if (userChoice && option === correctAnswer) {
           optionEl.querySelector("i").classList.add("fa-check");
-        } else if (option === userChoice && userChoice !== correctAnswer) {
+        } else if (
+          userChoice &&
+          option === userChoice &&
+          userChoice !== correctAnswer
+        ) {
           optionEl.querySelector("i").classList.add("fa-times");
         }
 
@@ -191,12 +195,6 @@ class Quiz {
 
         optionsEl.appendChild(optionEl);
       });
-      //   const correctAnswerEl = document.createElement("p");
-      //   correctAnswerEl.textContent = `Correct Answer: ${correctAnswer}`;
-      //   optionsEl.appendChild(correctAnswerEl);
-      //   const userChoiceEl = document.createElement("p");
-      //   userChoiceEl.textContent = `Your Answer: ${userChoice}`;
-      //   optionsEl.appendChild(userChoiceEl);
       this.recapEl.appendChild(questionEl);
     });
 
