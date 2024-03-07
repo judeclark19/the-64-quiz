@@ -7,9 +7,6 @@
 body {
   background-color: #a3ffdd;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  /* display: grid;
-
-  height: 100vh; */
 }
 
 main {
@@ -34,17 +31,21 @@ button:hover {
 
 .landing {
   text-align: center;
-  /* display: none; */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 h1 {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 3rem;
-  margin-bottom: 2rem;
 }
 
 .landing button {
   background-color: #f1356d;
+  width: fit-content;
+  padding: 1rem 3rem;
+  margin: 0 auto;
 }
 
 .gameplay {
