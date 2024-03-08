@@ -37,7 +37,8 @@ class Quiz {
         answer: "Colorado"
       },
       {
-        question: "In which year did Paul McCartney himself turn 64?",
+        question:
+          "In which year did Paul McCartney (composer of “When I’m Sixty-Four“ turn 64?",
         options: ["2006", "2007", "2008", "2009"],
         answer: "2006"
       },
